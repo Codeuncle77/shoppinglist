@@ -21,23 +21,12 @@
 
 #0 루들 로그인
 #루들 홈페이지 오픈
-import webbrowser
-webbrowser.get("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s").open("https://looddl.ch/")
+#import webbrowser
+#webbrowser.get("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s").open("https://looddl.ch/")
+
+from selenium import webdriver
+
+browser = webdriver.Chrome("c:/chromedriver.exe")
+browser.get("https://looddl.ch/")
 
 
-#https://medium.com/@kikigulab/how-to-automate-opening-and-login-to-websites-with-python-6aeaf1f6ae98
-
-
-login = web.click('로그인하기') #if you have login button in your web , if you have signin button then replace login with signin, in my case it is login
-
-
-#id = web.type('ktc5@kotra.ch',into='ktc5@kotra.ch',id='txtLoginId') #id='txtLoginId' this varies from web to web find this by inspecting the Id/Username/Emailid Button, in my case it is txtLoginId
-
-#next = web.click('NEXT', tag='span')
-
-#passw = web.type('Enter Your Password', into='Password', id='txtpasswrd')
-#id='txtpasswrd' (this also varies from web to web similiarly inspect the Password Button)in my case it is txtpasswrd
-
-#home = web.click('NEXT', id="fa fa-home", tag='span') 
-# id="fa fa-home" (Now inspect all necessary Buttons and move accordingly) in my case it is fa fa-home
-#next11 = web.click('NEXT', tag='span')
